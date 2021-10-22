@@ -9,20 +9,16 @@ const users = [
 const form = document.querySelector("#form");
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const usuario = document.getElementById("inputUsuario").value;
-    const contraseña = document.getElementById("inputContraseña").value;
+  e.preventDefault();
+  const usuario = document.getElementById("inputUsuario").value;
+  const contraseña = document.getElementById("inputContraseña").value;
 
   for (let index = 0; index < users.length; index++) {
     const element = users[index];
-   
     if (element.nombre == usuario && element.contraseña == contraseña) {
-      console.log("bienvenido" + "", usuario);
-  
-
-      } else {
+      console.log("bienvenido" + " ", usuario);
+    } else {
       console.log("error");
     }
-
   }
 });
